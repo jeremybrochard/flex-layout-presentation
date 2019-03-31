@@ -1,6 +1,6 @@
 # Présentation de Angular Flex Layout via [reveal.js](https://github.com/hakimel/reveal.js/)
 
-L'accès à la présentation se fait [**ici!**](https://stackblitz.com/github/jeremybrochard/flex-layout-demos)
+L'accès à la présentation se fait [**ici!**](https://jeremybrochard.github.io/flex-layout-presentation/)
 
 
 Les images présentes sont issue du [guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) de [CSS-TRICKS](https://css-tricks.com/) et de [CSS layout cheat sheet](https://learn-the-web.algonquindesign.ca/topics/css-layout-cheat-sheet/#layout-mechanics).
@@ -137,6 +137,7 @@ Démo présentant :
   - NgClass et NgStyle
   - Gestion du responsive via les alias
 
+Demos [ici](https://stackblitz.com/github/jeremybrochard/flex-layout-demos)
 
 
 | Breakpoint | MediaQuery                                               |
