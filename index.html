@@ -34,29 +34,19 @@
 				<h5>Flex Layout + directives Angular</h5>
 			</section>
 
-			<section data-transition="convex">
-				<h2>Introduction</h2>
-				<ul>
-					<li>Module NPM</li>
-					<li>Implémentation de FlexBox CSS + media queries</li>
-					<li>Projet open-source créé et maintenu par l'équipe Angular</li>
-					<li>Uniquement pour Angular 4.1.x ou plus</li>
-					<li>Suit les versions de Angular (actuellement en version 7.x)</li>
-				</ul>	
-			</section>
-
-			<section data-transition="convex">
+			<!-- Sommaire -->
+			<section data-transition="convex" style="font-size: 34px;">
 				<h2>Sommaire</h2>
 				<ol>
-					<li>Rappels sur Flexbox CSS</li>
-					<li>Présentation de Angular Flex Layout</li>
+					<li>Rappels sur Flex Layout</li>
+					<li>Présentation du module Angular Flex Layout</li>
 					<li>Demos</li>
 				</ol>
 			</section>
 
 			<!-- Les principaux layout CSS -->
 			<section data-transition="convex">
-				<section>
+				<section style="font-size: 34px;">
 					<h2>Principaux layouts CSS</h2>
 					<ul>
 						<li class="fragment fade-right">
@@ -65,7 +55,8 @@
 						</li>
 						<li class="fragment fade-right">Table / Grid layout</li>
 						<li class="fragment fade-right">Positionned layout</li>
-						<li class="fragment fade-right"><span style="font-weight: 800; color: rgb(38, 139, 210);">Flex Layout</span></li>
+						<li class="fragment fade-right"><span style="font-weight: 800; color: rgb(38, 139, 210);">Flex
+								Layout</span></li>
 					</ul>
 				</section>
 
@@ -73,32 +64,46 @@
 
 			<!-- Flexbox CSS -->
 			<section data-transition="convex">
-				<section>
-					<h2>FlexBox CSS</h2>
+				<section style="font-size: 34px;">
+					<h2>Flex Layout</h2>
 					<ul>
-						<li>W3C Candidate Recommendation depuis 2012 (dernière révision datant de 2018)</li>
+						<li>Aussi appelé Flexbox CSS</li>
+						<br>
+						<li>W3C Candidate Recommendation (2017)</li>
+						<br>
 						<li>Module CSS proposant un nouveau type de layout</li>
 					</ul>
 				</section>
-				<section>
+				<section style="font-size: 34px;">
 					<h2>Concept</h2>
 					<ul>
 						<li>Proposer une manière plus efficace pour placer, aligner et définir la taille de ses éléments
 							dans un contenant</li>
+						<br>
 						<li>Ne dépend pas d'une direction</li>
+						<br>
 						<li>Flexible : s'adapte très bien à tous type de formats</li>
 					</ul>
 				</section>
 				<section>
 					<h2>Conteneur et élément Flex</h2>
-					<img style="display: inline-block; width: 48%" src="./assets/01-container.svg">
-					<img style="display: inline-block; width: 48%" src="./assets/02-items.svg">
+					<div style="display: inline-block">
+						<img style="display: inline-block; width: 48%" src="./assets/01-container.svg">
+						<img style="display: inline-block; width: 48%" src="./assets/02-items.svg">
+					</div>
+					<div style="display: block; width: 72%; margin: auto;">
+						<pre><code style="font-size: 15px;" class="hljs" data-trim>
+							.container {
+								display: flex;
+							}
+						</code></pre>
+					</div>
 				</section>
 				<section>
 					<h2>Terminologie</h2>
 					<img src="./assets/00-basic-terminology.svg">
 				</section>
-				
+
 			</section>
 
 			<section data-transition="convex">
@@ -107,25 +112,43 @@
 				</section>
 				<section>
 					<ul>
-						<li>Direction : ligne / colonne / ligne ou colonne inversée</li>
+						<li style="font-size: 34px;">Direction : ligne / colonne / ligne ou colonne inversée</li>
 					</ul>
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.container {
+							display: flex;
+							flex-direction: row | column | row-reverse | column-reverse;
+						}
+					</code></pre>
 					<img style="display: inline-block;" src="./assets/flex-direction.svg">
 				</section>
 				<section>
 					<ul>
-						<li>Retour à la ligne : wrap</li>
+						<li style="font-size: 34px;">Retour à la ligne : wrap</li>
 					</ul>
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.container{
+							flex-wrap: nowrap | wrap | wrap-reverse;
+						}
+					</code></pre>
 					<img style="display: inline-block;" src="./assets/flex-wrap.svg">
 				</section>
 				<section>
 					<ul>
-						<li>Alignement sur l'axe principal / secondaire</li>
+						<li style="font-size: 34px;">Alignement sur l'axe principal / secondaire</li>
 					</ul>
-					<img style="display: inline-block; width: 38%; margin-right: 50px;" src="./assets/justify-content.svg">
-					<img style="display: inline-block; width: 38%; padding-top: 6.5%; padding-bottom: 6.5%;" src="./assets/align-items.svg">
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.container{
+							justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+							align-items: stretch | flex-start | flex-end | center | baseline;
+						}
+					</code></pre>
+					<img style="display: inline-block; width: 28%; margin-right: 50px;"
+						src="./assets/justify-content.svg">
+					<img style="display: inline-block; width: 28%;"
+						src="./assets/align-items.svg">
 				</section>
 			</section>
-
 
 			<section data-transition="convex">
 				<section>
@@ -133,72 +156,109 @@
 				</section>
 				<section>
 					<ul>
-						<li>Ordre des éléments</li>
+						<li style="font-size: 34px;">Ordre des éléments</li>
 					</ul>
-					<img style="display: inline-block; width: 70%;" src="./assets/order.svg">
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.item {
+							order: [integer]; /* default 0 */
+						}
+					</code></pre>
+					<img style="display: inline-block; width: 50%;" src="./assets/order.svg">
 				</section>
 				<section>
 					<ul>
-						<li>Taille de base (basis), facteur d'agrandissement (grow) et de rétrecissement (shrink)</li>
+						<li style="font-size: 34px;">Taille de base (basis), facteur d'agrandissement (grow) et de rétrecissement (shrink)</li>
 					</ul>
-					<img style="display: inline-block;" src="./assets/flex-grow.svg">
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.item {
+							flex-grow: [number]; /* default 0 */
+							flex-shrink: [number]; /* default 1 */
+							flex-basis: [length] | auto; /* default auto */
+						}
+					</code></pre>
+					<img style="display: inline-block; width: 80%;" src="./assets/flex-grow.svg">
 				</section>
 				<section>
 					<ul>
-						<li>Alignement</li>
+						<li style="font-size: 34px;">Alignement</li>
 					</ul>
-					<img style="display: inline-block;" src="./assets/align-self.svg">
+					<pre><code style="font-size: 15px;" class="hljs" data-trim>
+						.item {
+							align-self: auto | flex-start | flex-end | center | baseline | stretch;
+						}
+					</code></pre>
+					<img style="display: inline-block; width: 80%;" src="./assets/align-self.svg">
 				</section>
 			</section>
 
-
 			<!-- Présentation de Angular Flex Layout -->
 			<section data-transition="convex">
-				<h2>Le module Angular Flex Layout</h2>
-				<ul>
-					<li>Implémentation FlexBox CSS</li>
+				<section style="font-size: 34px;">
+					<h2>Le module Angular Flex Layout</h2>
 					<ul>
-						<li>Approche JS</li>
-						<li>Directives dans le template HTML</li>
+						<li>Projet open-source créé et maintenu par l'équipe Angular</li>
+						<li>Uniquement pour Angular 4.1.x ou plus</li>
+						<br>
+						<li>Implémentation de FlexBox CSS</li>
+						<ul>
+							<li>Approche JS</li>
+							<li>Directives dans le template HTML</li>
+						</ul>
+						<br>
+						<li>Fonctionnalités supplémentaires</li>
+						<ul>
+							<li>Media-queries</li>
+							<li>CSS Grid</li>
+							<li>Espacement / styles dynamiques</li>
+						</ul>
 					</ul>
-					<br>
-					<li>Fonctionnalités supplémentaires</li>
-					<ul>
-						<li>Media-queries</li>
-						<li>Cross-platform</li>
-						<li>Espacement / styles dynamiques</li>
-					</ul>
-				</ul>
+				</section>
+				<section>
+					<h2>Flexbox CSS vs Angular Flex Layout</h2>
+					<img style="display: inline-block;" src="./assets/flex-column-example.PNG">
+					<div style="display: inline-block;">
+						<div style="display: inline-block; width: 45%"">
+							<span>Pure CSS</span>
+							<pre style="height: 30vh"><code style="font-size: 10px; height: inherit;" class="hljs" data-trim>
+								<style>
+									.container {
+										display: flex;
+										flex-direction: column;
+									}
+									/* Row Gap */
+									.container > *:not(:last-child) {
+										margin-bottom: 30px;
+									}
+								</style>
+								<div class="container">
+									<div>ONE</div>
+									<div>TWO</div>
+									<div>THREE</div>
+								</div>
+							</code></pre>
+						</div>
+						<div style="display: inline-block; width: 46%">
+							<span>Angular Flex Layout</span>
+							<pre style="height: 30vh"><code style="font-size: 10px; height: inherit;" class="hljs" data-trim>
+								<div fxLayout="column" fxLayoutGap="30px">
+									<div>ONE</div>
+									<div>TWO</div>
+									<div>THREE</div>
+								</div>
+							</code></pre>
+						</div>
+					</div>
+				</section>
 			</section>
 
 			<!-- Demos -->
 			<section data-transition="convex">
-				<section >
-					<h2>Demos</h2>
-					<ul>
-						<li>Les directives sur les conteneurs</li>
-						<ul>
-							<li>Direction / Alignement / Espacement</li>
-						</ul>
-						<br>
-						<li>Les directives sur les éléments</li>
-						<ul>
-							<li>Ordre / Aligement</li>
-							<li>Taille (basis grow shrink)</li>
-						</ul>
-						<br>
-						<li>Ajouts du module Angular</li>
-						<ul>
-							<li>FxHide et FxShow</li>
-							<li>Gestion du responsive via les alias</li>
-						</ul>
-					</ul>
-				</section>
 				<section>
+					<h2>Demos</h2>
 					<a href="https://stackblitz.com/github/jeremybrochard/flex-layout-demos">Demos & Exemples</a>
 				</section>
 			</section>
-		
+
 		</div>
 	</div>
 
